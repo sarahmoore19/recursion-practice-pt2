@@ -13,10 +13,13 @@ reverse(""); // ""
 ***********************************************************************/
 
 
-function reverse(str) {
-  // Your code here
+function reverse(str, newStr = "") {
+ if (str.length === 0) return newStr;
+ else {
+  newStr = str[0] + newStr;
+  return reverse(str.slice(1), newStr);
+ }
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
