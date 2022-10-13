@@ -11,16 +11,13 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
-
-
-function reverse(str, newStr = "") {
- if (str.length === 0) return newStr;
- else {
-  newStr = str[0] + newStr;
-  return reverse(str.slice(1), newStr);
- }
+let reverse = (str, rev = "") => {
+  if (str.length === 0) return rev;
+  rev = str[0] + rev;
+  return reverse(str.slice(1), rev);
 }
 
+console.log(reverse("dragon"))
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;

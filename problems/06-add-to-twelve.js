@@ -11,16 +11,11 @@ console.log(addToTwelve([1, 11, 4, 7, 6])); // true
 console.log(addToTwelve([1, 12, 4, 7, 6])); // false
 console.log(addToTwelve([1])); // false
 ***********************************************************************/
-
-
-function addToTwelve(arr) {
-  if (arr.length < 2) return false;
-
-  else if (arr[0] + arr[1] === 12) return true;
-
+let addToTwelve = (arr) => {
+  if (arr.length === 1) return false;
+  if (arr[0] + arr[1] === 12) return true;
   return addToTwelve(arr.slice(1));
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

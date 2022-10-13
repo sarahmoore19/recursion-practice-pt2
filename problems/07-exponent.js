@@ -19,11 +19,10 @@ exponent(3, 2); // 9
 exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
 ***********************************************************************/
-
-function exponent(num, power) {
+let exponent = (num, power) => {
   if (power === 0) return 1;
-  if (power < 0) return 1 / num * exponent(num, power + 1);
   if (power > 0) return num * exponent(num, power - 1);
+  if (power < 0) return 1 / num * exponent(num, power + 1)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

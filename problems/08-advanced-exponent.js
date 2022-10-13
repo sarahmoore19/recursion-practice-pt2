@@ -38,18 +38,11 @@ For each of the examples above, figure out how many times your code should
 be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
-
-  function advancedExponent(b, n) {
-    if (n === 0) return 1
-    if (n === 1) return b
-    if (n % 2 === 0) {
-      return advancedExponent(b, n / 2) ** 2
-    } if (n % 2 !== 0) {
-      return b * (advancedExponent(b, (n - 1) / 2) ** 2)
-    }
-  }
-
-
+let advancedExponent = (b, n) => {
+  if (n === 0) return 1;
+  if (n % 2 === 0) return advancedExponent(b, n / 2) ** 2
+  if (n % 2 !== 0) return b * (advancedExponent(b, (n - 1) / 2) ** 2)
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
